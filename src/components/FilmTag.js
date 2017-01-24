@@ -68,15 +68,18 @@ const styles = StyleSheet.create({
     },
     tag: {
         marginLeft: 8,
-        padding: 5,
         borderRadius: 4,
         backgroundColor: '#ddd',
         height:24,
+        paddingLeft:5,
+        paddingRight:5,
+        justifyContent:'center',
     },
     label: {
         fontSize: 14,
         color: '#666',
-        height:19
+        height:24,
+        lineHeight:24,
     },
     touchView:{
         height:24,

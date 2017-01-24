@@ -128,21 +128,24 @@ class App extends Component {
     render() {
         const {tabIndex} = this.props;
         return (
-            <Navigator style={styles.main}
-                       initialRoute={{ name: '正在热映', component: PopularApp }}
-                       configureScene={(route, routeStack) => Navigator.SceneConfigs.PushFromRight}
-                       renderScene={(route, navigator) => {
+                <Navigator style={styles.main}
+                           initialRoute={{ name: '正在热映', component: PopularApp }}
+                           configureScene={(route, routeStack) => Navigator.SceneConfigs.PushFromRight}
+                           renderScene={(route, navigator) => {
                            let Component = route.component;
                            this.navigator = navigator;
                            return <Component {...route.params} navigator={navigator} />
 
                         }}
-                       navigationBar={
+                           navigationBar={
                            <View style={styles.tabs}>
                            <TabBar changeTab={(index)=>this.changeTab(index)} tabIndex={tabIndex} tabs={this.tabs}/>
                            </View>
                        }
-            />
+                >
+                </Navigator>
+
+
         )
     }
 }

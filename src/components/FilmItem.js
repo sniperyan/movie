@@ -39,7 +39,7 @@ class FilmItem extends Component {
         const height = width * 2;
         const imageHeight = height - 70;
         return (
-            <View style={[styles.filmItem,{width:width,height:height}]}>
+            <View style={[styles.filmItem,{width:width,height:height+5}]}>
                 <TouchableOpacity onPress={()=>this.tapSubject(rowData.id)}>
                     <Image style={{width:width,height:imageHeight}} source={{uri: rowData.images.large}}>
                         <View style={[styles.scoreBg,{width:width}]}>
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
         marginLeft: 4,
         marginBottom: 5,
         borderRadius: 10,
-        overflow:'hidden'
+        overflow:'hidden',
     },
     title: {
         padding: 8,

@@ -52,6 +52,11 @@ react-native run-ios
 1. 选中自己的iPhone，点击build按钮
 1. build success之后，在手机 设置-通用-描述文件与设备管理-开发者应用 内选择信任应用
 
+## 应用打包
+
+1. ios app 需要688RMB买一个帐号才能上App Store，实在没钱就算了
+1. 安卓利用gradle打包很简单，修改应用名称：`android\app\src\main\res\values\strings.xml`, `<string name="app_name">MyProject</string>`MyProject改成你需要的名字就好了。图标在android\app\src\main\res文件夹下每个mipmap开头的文件夹下有一个不同尺寸的版本，可以自行输出
+1. 打包好的安卓包在android-apk目录下
 ## 运行效果
 ![运行效果](./images/movie-ios.gif)
 

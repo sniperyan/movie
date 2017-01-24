@@ -6,7 +6,8 @@ import {
     StyleSheet,
     View,
     Text,
-    TouchableOpacity
+    TouchableOpacity,
+    Platform
 } from 'react-native';
 //引入字体文件
 import Icon from 'react-native-vector-icons/Entypo';
@@ -15,6 +16,12 @@ class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {};
+        if(Platform.OS === 'ios'){
+            this.height = 24
+
+        }else if(Platform.OS === 'android'){
+            this.height = 0
+        }
     }
 
     static defaultProps = {
@@ -32,7 +39,7 @@ class Header extends Component {
         if (leftEle && leftFunc) {
             left =
                 (
-                    <TouchableOpacity style={styles.left} onPress={()=>leftFunc()}>
+                    <TouchableOpacity style={[styles.left,{marginTop: this.height}]} onPress={()=>leftFunc()}>
                         <Icon
                             name={leftEle}
                             size={22}
@@ -45,7 +52,7 @@ class Header extends Component {
         if (rightEle && rightFunc) {
             right =
                 (
-                    <TouchableOpacity style={styles.right} onPress={()=>leftFunc()}>
+                    <TouchableOpacity style={[styles.right,{marginTop: this.height}]} onPress={()=>leftFunc()}>
                         <Icon
                             name={rightEle}
                             size={22}
@@ -55,9 +62,9 @@ class Header extends Component {
                 )
         }
         return (
-            <View style={styles.header}>
+            <View style={[styles.header,{height:28+this.height}]}>
                 {left}
-                <Text style={styles.text}>{name}</Text>
+                <Text style={[styles.text,{marginTop: this.height}]}>{name}</Text>
                 {right}
             </View>
         );
@@ -67,24 +74,20 @@ const styles = StyleSheet.create({
     header: {
         flexDirection: 'row',
         backgroundColor: configs.MAIN_GREEN,
-        height: 52,
     },
     text: {
         color: '#ffffff',
-        marginTop: 24,
         fontSize: 22,
         flex:1,
         textAlign:'center'
     },
     left:{
         width:60,
-        marginTop: 24,
         paddingLeft:10
 
     },
     right:{
         width:60,
-        marginTop: 24,
         paddingRight:10
     }
 
