@@ -32,6 +32,17 @@ react-native run-ios
 1. 豆瓣API参考 [https://developers.douban.com/wiki/?title=api_v2](https://developers.douban.com/wiki/?title=api_v2)
 1. 开发过程中最好使用mock server，豆瓣的api有调用限制，频繁调用会被封ip，mock server地址[https://github.com/sniperyan/doubanMock](https://github.com/sniperyan/doubanMock)
 1. 字体图标使用`react-native-vector-icons`，安卓和ios使用都需要配置，具体使用方法请参考官方文档[https://github.com/oblador/react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
+1. 豆瓣的API有比较坑的地方，比如`/v2/movie/subject/`返回的数据里，directors和casts字段里avatars与id属性都可能为null值，所以需要特殊处理，见代码`src/components/FilmDetail.js`
+
+## 开发总结
+
+1. debug js remotely 看不到fetch的请求，mac下用charles抓包
+1. debug js remotely 调试js时候，es6，es7语法是未编译的（目前还未发现类似react开发时候在webpack里配置sourceMap的方法），导致部分地方断点进不去，可以使用`console.log`输出关键信息
+1. 写样式的时候，没有了chorme方便的样式调试工具，开始的时候非常不习惯也不好排错。可以给组件添加`backgroundColor`辅助检查，其实后来发现很多错误都是没有设置宽和高造成的，同时也可以用`show inspector`
+1. 当年搞react时候的react dev tools 不能用了，非常的不爽
+1. 适配手机屏幕，用`Dimensions.get('window').width`取到屏幕宽度，然后按比例算宽和高度
+1. 不要看中文文档！不要看中文文档！不要看中文文档！重要的事情说3遍，直接看facebook的英文文档！
+
 
 ## run on iphone
 
