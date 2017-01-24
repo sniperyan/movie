@@ -18,13 +18,11 @@ export function getSubject(id) {
         return fetch(configs.HOST+'/v2/movie/subject/'+id)
             .then((response) => response.json())
             .then((responseJson) => {
-                console.log(responseJson)
                 dispatch(setSubject({
                     showLoading: false,
                     subject:responseJson
                 }));
             }).catch(function (ex) {
-                console.log(ex)
                 Toast.show('网络发生错误,请重试!', {
                     duration: 2000,
                     position: 0,
