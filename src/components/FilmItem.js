@@ -96,7 +96,8 @@ const styles = StyleSheet.create({
         bottom: 0,
         left: 0,
         backgroundColor: '#000',
-        height:26
+        height:26,
+        justifyContent:'center',
     },
     scoreText: {
         color: '#fff',
@@ -104,8 +105,8 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight:'bold',
         paddingRight:6,
-        height:26,
-        paddingTop:3
+        height:26
+
     }
 });
 export default FilmItem;

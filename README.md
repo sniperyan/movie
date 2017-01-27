@@ -26,6 +26,11 @@ ios运行:
 ```
 react-native run-ios
 ```
+* 如果运行报错，请检查 *
+1. `react-native-vector-icons`是否配置
+1. `/android/app`下是否有`my-release-key.keystore`
+1. 是不是用了cnpm安装依赖，换用npm就没问题（我在公司用的mac，回家用的windows，开始用的cnpm，报的奇葩的错误，换了npm就好了）
+1. 再看看错误信息，自行查找解决方案，如果解决不了，可以提`issue`
 
 ## 说明
 
@@ -60,6 +65,11 @@ react-native run-ios
 
 ## 运行效果
 
+ios:
 ![运行效果](./images/movie-ios.gif)
+
+android:
+![运行效果](./images/android-1.jpg)
+![运行效果](./images/android-2.jpg)
 
 

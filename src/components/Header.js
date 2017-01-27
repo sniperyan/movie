@@ -79,16 +79,20 @@ const styles = StyleSheet.create({
         color: '#ffffff',
         fontSize: 22,
         flex:1,
-        textAlign:'center'
+        textAlign:'center',
+        height:28,
     },
     left:{
         width:60,
-        paddingLeft:10
-
+        paddingLeft:10,
+        height:28,
+        justifyContent:'flex-end',
     },
     right:{
         width:60,
-        paddingRight:10
+        paddingRight:10,
+        height:28,
+        justifyContent:'flex-end',
     }
 
 

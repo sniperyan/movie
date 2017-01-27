@@ -78,8 +78,6 @@ const styles = StyleSheet.create({
     label: {
         fontSize: 14,
         color: '#666',
-        height:24,
-        lineHeight:24,
     },
     touchView:{
         height:24,
