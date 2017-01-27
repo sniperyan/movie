@@ -27,7 +27,7 @@ ios运行:
 react-native run-ios
 ```
 
-* 如果运行报错，请检查 *
+* 如果运行报错，请检查
 
 1. `react-native-vector-icons`是否配置
 1. `/android/app`下是否有`my-release-key.keystore`
