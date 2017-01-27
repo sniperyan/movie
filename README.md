@@ -68,9 +68,11 @@ react-native run-ios
 ## 运行效果
 
 ios:
+
 ![运行效果](./images/movie-ios.gif)
 
 android:
+
 ![运行效果](./images/android-1.jpg)
 ![运行效果](./images/android-2.jpg)
 
